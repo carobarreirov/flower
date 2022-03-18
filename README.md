@@ -2,7 +2,7 @@
 
 Simple flower using JavaScript
 
-<img src="./img/flower.png" style="width:300px ; height:300px" />
+<img src="./flower.png" style="width:300px ; height:300px" />
 
 ### Demo
 
