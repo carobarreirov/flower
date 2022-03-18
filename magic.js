@@ -28,7 +28,7 @@ function isEven(n) {
 // fermat's spiral
 for (var i = 0; i < 350; i++) {
   var theta = 2.39998131 * i;
-  var radius = 4 * Math.sqrt(theta);
+  var radius = 2.6* Math.sqrt(theta);
   var x = Math.cos(theta) * radius;
   var y = Math.sin(theta) * radius;
 
@@ -81,7 +81,7 @@ function circle(){
 var x = 0;
 var y = 0;
 var r = 39;
-for (var i =-27; i<=27; i+=3){
+for (var i =-27; i<=27; i+=4){
     x = i;
     y = Math.sqrt(r*r - x*x);
     angle = 2*Math.atan(y/(x+Math.sqrt(x*x+y*y)));
