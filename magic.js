@@ -4,15 +4,15 @@ var shape = document.getElementById('petal');
 // sunflower florets/seeds
 function dot(x,y,color){
     // set div attributes
-    x = x + 300;
-    y = y + 300;
+    x = x + 500;
+    y = y + 500;
     var div = document.createElement('div');
     div.style.zIndex = '1';
     div.style.position = 'absolute';    
     div.style.left = x + 'px';    
     div.style.top = y + 'px';    
-    div.style.width = '5px';    
-    div.style.height = '5px';    
+    div.style.width = '7px';    
+    div.style.height = '7px';    
     div.style.borderRadius = '50%';
     div.style.background = color;    
 
@@ -26,22 +26,22 @@ function isEven(n) {
 }
 
 // fermat's spiral
-for (var i = 0; i < 1000; i++) {
+for (var i = 0; i < 350; i++) {
   var theta = 2.39998131 * i;
-  var radius = 2.5 * Math.sqrt(theta);
+  var radius = 4 * Math.sqrt(theta);
   var x = Math.cos(theta) * radius;
   var y = Math.sin(theta) * radius;
 
-  var color = '#66bb6a';
-  if(isEven(i)) {color = '#ffd600';} 
+  var color = '#BF656A';
+  if(isEven(i)) {color = '#DEDADE';} 
   dot(x,y,color);
 }
 
 // flower petals
 function petal(x,y,r){
     var clone = shape.cloneNode(true);
-    x = x + 285;
-    y = y + 210;    
+    x = x + 482;
+    y = y + 450;    
     clone.style.left = x + 'px';    
     clone.style.top = y + 'px';    
     clone.style.transform = `rotate(${r}deg) translateY(-150px)`;
@@ -77,12 +77,11 @@ function circle(){
 // circle();
 
 
-
 // draw petals
 var x = 0;
 var y = 0;
-var r = 50;
-for (var i =-36; i<=36; i+=4){
+var r = 39;
+for (var i =-27; i<=27; i+=3){
     x = i;
     y = Math.sqrt(r*r - x*x);
     angle = 2*Math.atan(y/(x+Math.sqrt(x*x+y*y)));
@@ -102,4 +101,3 @@ for (var i =-36; i<=36; i+=4){
 
     // no need to switch back, variables reassigned
 }
-
